@@ -1,0 +1,65 @@
+{
+  "resource": {
+    "github_membership": {
+      "membership_Baracus": {
+        "role": "member",
+        "username": "Baracus"
+      },
+      "membership_Peck": {
+        "role": "member",
+        "username": "Peck"
+      },
+      "membership_Schultz": {
+        "role": "member",
+        "username": "Schultz"
+      },
+      "membership_Smith": {
+        "role": "member",
+        "username": "Smith"
+      },
+      "membership_admin_of_org": {
+        "role": "admin",
+        "username": "admin_of_org"
+      }
+    },
+    "github_team": {
+      "team_a-team": {
+        "description": "The A-Team",
+        "name": "a-team",
+        "privacy": "closed"
+      },
+      "team_admins": {
+        "description": "Admins",
+        "name": "admins",
+        "privacy": "closed"
+      }
+    },
+    "github_team_membership": {
+      "team_a-team_member_Baracus": {
+        "role": "maintainer",
+        "team_id": "${github_team.team_a-team.id}",
+        "username": "Baracus"
+      },
+      "team_a-team_member_Peck": {
+        "role": "maintainer",
+        "team_id": "${github_team.team_a-team.id}",
+        "username": "Peck"
+      },
+      "team_a-team_member_Schultz": {
+        "role": "maintainer",
+        "team_id": "${github_team.team_a-team.id}",
+        "username": "Schultz"
+      },
+      "team_a-team_member_Smith": {
+        "role": "maintainer",
+        "team_id": "${github_team.team_a-team.id}",
+        "username": "Smith"
+      },
+      "team_admins_member_admin_of_org": {
+        "role": "maintainer",
+        "team_id": "${github_team.team_admins.id}",
+        "username": "admin_of_org"
+      }
+    }
+  }
+}
