@@ -11,8 +11,8 @@ in let TF/ref3 = \(scope : Text) -> \(k2 : Text) -> \(k3 : Text) -> "\${${scope}
 
 in let TF/toText = \(role: T.TF/GithubUserRole) ->
     merge {
-        admin = \(_ :{}) -> "admin"
-        , member = \(_ :{}) -> "member"
+        admin = \(_ : {}) -> "admin"
+        , member = \(_ : {}) -> "member"
     } role
 
 in let makeGithubMembership = \(username: Text) -> \(role: T.TF/GithubUserRole) ->
@@ -60,8 +60,8 @@ in let makeGithubTeamMembership = \(u: T.GithubUser) ->
     : List T.TF/GithubTeamMembership
 
 in let emptyListToOptional = \(a: Type) -> \(l: List a) ->
-    if (null a l) then [] : Optional (List a)
-    else [l]: Optional (List a)
+    if (null a l) then None (List a)
+    else Some l
 
 in let build = \(config: T.Config) ->
         let github_membership = map T.GithubUser T.TF/GithubMembership makeGithubMembership config.users

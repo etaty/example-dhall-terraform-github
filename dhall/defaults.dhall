@@ -1,7 +1,7 @@
 let T = ./types.dhall
 
 
-in let githubUserRole = constructors T.TF/GithubUserRole
+in let githubUserRole = T.TF/GithubUserRole
 
 in let member = githubUserRole.member {=}
 in let admin = githubUserRole.admin {=}
